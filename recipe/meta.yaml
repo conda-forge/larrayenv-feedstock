@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build: []
@@ -14,7 +14,7 @@ requirements:
       - larray
       - qtconsole
       - matplotlib
-      - pyqt
+      - pyqt 5.6.*
       - qtpy
       - pytables
       - xlsxwriter
