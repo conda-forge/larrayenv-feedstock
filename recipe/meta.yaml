@@ -1,37 +1,46 @@
-{% set name = "larrayenv" %}
-{% set version = "0.23" %}
+{% set version = "0.32.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: larrayenv
   version: {{ version }}
 
 build:
-  number: 1
+  # we cannot have a noarch package because of the conditional dependency on xlwings
+  number: 0
 
 requirements:
-  build: []
+  host:
+    - python
+    - pip
+
   run:
-      - larray
-      - qtconsole
-      - matplotlib
-      - pyqt 5.6.*
-      - qtpy
-      - pytables
-      - xlsxwriter
-      - xlrd
-      - openpyxl
-      - xlwings
+    - python
+    - larray =={{ version }}
+    - larray-editor =={{ version }}
+    - larray_eurostat =={{ version }}
+    - qtconsole
+    - matplotlib
+    - pyqt 5.6.*
+    - qtpy
+    - pytables
+    - xlsxwriter
+    - xlrd
+    - openpyxl
+    - xlwings  # [win or osx]
 
 test:
-  imports: []
+  imports:
+    - larray
+    - larray_editor
 
 about:
-  home: http://github.com/liam2/larray
-  license: GPL-3.0
+  home: http://github.com/larray-project/larray
+  license: GPL-3.0-only
   license_family: GPL
   license_file: '{{ RECIPE_DIR }}/LICENSE'
   summary: "Meta-package to install LArray and all its optional dependencies"
   doc_url: http://larray.readthedocs.io/
+  dev_url: http://github.com/larray-project/larray
 
 extra:
   recipe-maintainers:
