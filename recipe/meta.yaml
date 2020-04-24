@@ -6,7 +6,7 @@ package:
 
 build:
   # we cannot have a noarch package because of the conditional dependency on xlwings
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
     - larray_eurostat =={{ version }}
     - qtconsole
     - matplotlib
-    - pyqt 5.6.*
+    - pyqt
     - qtpy
     - pytables
     - xlsxwriter
