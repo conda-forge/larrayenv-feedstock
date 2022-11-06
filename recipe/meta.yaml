@@ -6,7 +6,7 @@ package:
 
 build:
   # we cannot have a noarch package because of the conditional dependency on xlwings
-  number: 3
+  number: 4
 
 requirements:
   host:
