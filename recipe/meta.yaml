@@ -18,10 +18,14 @@ requirements:
     - larray =={{ version }}
     - larray-editor =={{ version }}
     - larray_eurostat =={{ version }}
-    - qtconsole
+    # it is indirectly pulled from larray, but let us be explicit about this
+    - numpy
     - matplotlib
-    - pyqt
-    - qtpy
+    - pyqt >=5
+    - qtpy >=2    # for Qt6 support
+    # jedi >=0.18 to workaround incompatibility between jedi <0.18 and parso >=0.8 (see #220)
+    - jedi >=0.18
+    - qtconsole !=5.4.2
     - pytables
     - xlsxwriter
     - xlrd
