@@ -1,11 +1,11 @@
-About larrayenv
-===============
+About larrayenv-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/larrayenv-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/larray-project/larray
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/larrayenv-feedstock/blob/main/LICENSE.txt)
 
 Summary: Meta-package to install LArray and all its optional dependencies
 
