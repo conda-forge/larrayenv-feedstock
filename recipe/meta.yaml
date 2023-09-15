@@ -1,4 +1,4 @@
-{% set version = "0.32.2" %}
+{% set version = "0.34.1" %}
 
 package:
   name: larrayenv
@@ -6,7 +6,7 @@ package:
 
 build:
   # we cannot have a noarch package because of the conditional dependency on xlwings
-  number: 4
+  number: 0
 
 requirements:
   host:
