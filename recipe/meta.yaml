@@ -38,13 +38,13 @@ test:
     - larray_editor
 
 about:
-  home: http://github.com/larray-project/larray
+  home: https://github.com/larray-project/larray
   license: GPL-3.0-only
   license_family: GPL
   license_file: '{{ RECIPE_DIR }}/LICENSE'
   summary: "Meta-package to install LArray and all its optional dependencies"
-  doc_url: http://larray.readthedocs.io/
-  dev_url: http://github.com/larray-project/larray
+  doc_url: https://larray.readthedocs.io/
+  dev_url: https://github.com/larray-project/larray
 
 extra:
   recipe-maintainers:
