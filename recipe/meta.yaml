@@ -6,12 +6,13 @@ package:
 
 build:
   # we cannot have a noarch package because of the conditional dependency on xlwings
-  number: 2
+  number: 3
 
 requirements:
   host:
     - python
     - pip
+    - setuptools
 
   run:
     - python
