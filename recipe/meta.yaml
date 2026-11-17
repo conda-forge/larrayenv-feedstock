@@ -1,4 +1,4 @@
-{% set version = "0.34.6" %}
+{% set version = "0.35.2" %}
 
 package:
   name: larrayenv
@@ -6,7 +6,7 @@ package:
 
 build:
   # we cannot have a noarch package because of the conditional dependency on xlwings
-  number: 3
+  number: 0
 
 requirements:
   host:
@@ -19,14 +19,13 @@ requirements:
     - larray =={{ version }}
     - larray-editor =={{ version }}
     - larray_eurostat =={{ version }}
-    # it is indirectly pulled from larray, but let us be explicit about this
-    - numpy
+    - pandas <3.1
+    - numpy <2.6
+    - pydantic 2.*
+    - qtconsole
     - matplotlib
-    - pyqt >=5
-    - qtpy >=2    # for Qt6 support
-    # jedi >=0.18 to workaround incompatibility between jedi <0.18 and parso >=0.8 (see #220)
-    - jedi >=0.18
-    - qtconsole !=5.4.2
+    - pyqt
+    - qtpy
     - pytables
     - xlsxwriter
     - xlrd
